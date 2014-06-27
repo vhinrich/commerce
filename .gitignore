@@ -6,5 +6,5 @@ cache/
 files/
 sites/*/files
 sites/*/private
-*/.sass-cache
+*/.sass-cache/*
 *.DS_Store*

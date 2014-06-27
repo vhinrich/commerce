@@ -1,0 +1,20 @@
+@import 'mixins';
+
+$defaultFontFamily = 'Open Sans', Helvetica, Arial, sans-serif;
+$defaultFontColor = #333;
+$headsFontFamily = $defaultFontFamily;
+$headsFontColor = #111;
+
+body{font-family: $defaultFontFamily;color:$defaultFontColor}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family: $headsFontFamily;color:$headsFontColor}
+h1, h2, .h1, .h2{text-transform: uppercase}
+
+body > .container{max-width: none !important; width: 100%}
+
+.well{
+    @include border-radius(0);
+    @include box-shadow(0,0,0,0,false);
+}
+.navbar{
+    @include border-radius(0);
+}
