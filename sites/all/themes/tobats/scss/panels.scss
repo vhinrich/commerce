@@ -1,3 +1,19 @@
+.panel-flexible .panels-flexible-row .panels-flexible-region{
+	.inside{
+		padding: 0 10px;
+	}
+}
 @media (max-width: 767px){
-	.panel-flexible .panels-flexible-row .panels-flexible-region{float: none; width: auto}
+	.panel-flexible .panels-flexible-row .panels-flexible-region{
+		float: none; width: auto;
+		.inside{
+			padding: 0 10px;
+		}
+	}
+}
+
+.pane-commerce-cart-cart{
+	&.affix{
+		top: 30px;
+	}
 }
