@@ -1,0 +1,7 @@
+name = Commerce Image Styles
+core = 7.x
+package = Commerce
+dependencies[] = image
+features[features_api][] = api:2
+features[image][] = big_teaser
+features[image][] = teaser

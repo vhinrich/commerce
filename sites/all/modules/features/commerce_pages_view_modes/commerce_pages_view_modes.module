@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Commerce Pages, View Modes feature.
+ */
+
+include_once 'commerce_pages_view_modes.features.inc';
