@@ -1,13 +1,17 @@
 .panel-flexible .panels-flexible-row .panels-flexible-region{
 	.inside{
-		padding: 0 10px;
+		.panel-pane{
+			padding: 0 10px;
+		}
 	}
 }
 @media (max-width: 767px){
 	.panel-flexible .panels-flexible-row .panels-flexible-region{
 		float: none; width: auto;
 		.inside{
-			padding: 0 10px;
+			.panel-pane{
+				padding: 0 10px;
+			}
 		}
 	}
 }

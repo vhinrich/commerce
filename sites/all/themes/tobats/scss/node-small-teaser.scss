@@ -2,4 +2,13 @@
 
 .node.node-small_teaser{
 	img{width:100%; height:auto}
+	.field-name-commerce-price{
+		font-size: 20px;
+		color: #F16272;
+	}
+	.commerce-add-to-cart{
+		.form-submit{
+			float: right;
+		}
+	}
 }
