@@ -5,15 +5,15 @@ $defaultFontColor = #333;
 $headsFontFamily = $defaultFontFamily;
 $headsFontColor = #111;
 
-body{font-family: $defaultFontFamily;color:$defaultFontColor;line-height: 1.5em}
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family: $headsFontFamily;color:$headsFontColor;line-height: 1.5em}
+body{font-family: $defaultFontFamily;color:$defaultFontColor;line-height: 1.5em;background: #EFEFEF}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family: $headsFontFamily;color:$headsFontColor;line-height: 1.5em;margin:0}
 h1, h2, .h1, .h2{text-transform: uppercase}
 
 body > .container{max-width: none !important; width: 100%;color: #333}
 a{
-	color: #FF555A;
+	color: #2969B0;
 	&:hover,&:focus{
-		color: #F16272;
+		color: #2C82C9;
 		text-decoration: none;
 	}
 }
@@ -33,7 +33,7 @@ header{
 	&.navbar.container{
 		margin: 0;
 		&.navbar-default{
-			background: #00A5E7;
+			background: #54ACD2;
 			border: none;
 			.navbar-brand{
 				color: #F1F0EA;
@@ -46,9 +46,9 @@ header{
 					color: #F1F0EA;
 				}
 				&.active>a{
-					background: #009BD9;
+					background: #3D8EB9;
 					&:hover,&:focus{
-						background: #009BD9;
+						background: #3D8EB9;
 					}
 				}
 			}
@@ -56,3 +56,12 @@ header{
 	}	
 }
 .alert{@include border-radius(0);margin: 10px 0}
+.btn-success{
+	color: #fff;
+	background-color: #1ABC9C;
+	border-color: #00A885;
+	&:hover, &:focus, &:active, &.active{
+		background-color: #00A885;
+		border-color: #00A885;
+	}
+}
