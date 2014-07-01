@@ -124,7 +124,7 @@ function commerce_pages_view_modes_default_page_manager_pages() {
         'width' => 100,
         'width_type' => '%',
         'parent' => '2',
-        'class' => 'col-sm-12',
+        'class' => 'col-sm-12 top-main',
       ),
       'footer_main' => array(
         'type' => 'region',

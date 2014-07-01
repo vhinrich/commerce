@@ -11,6 +11,14 @@
 			}
 		}
 	}
+	&.top-main{
+		.inside{
+			.panel-pane{
+				padding: 0;
+				margin: 0 -15px 15px;
+			}
+		}	
+	}
 }
 @media (max-width: 767px){
 	.panel-flexible .panels-flexible-row .panels-flexible-region{
@@ -21,6 +29,11 @@
 			}
 
 			&.panels-flexible-region-new-top_main-inside{
+				.panel-pane{padding: 0}
+			}
+		}
+		&.top-main{
+			inside{
 				.panel-pane{padding: 0}
 			}
 		}
