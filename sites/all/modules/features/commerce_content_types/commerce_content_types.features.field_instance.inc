@@ -201,8 +201,10 @@ function commerce_content_types_field_default_field_instances() {
       'big_teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
+        'settings' => array(
+          'trim_length' => 200,
+        ),
+        'type' => 'text_trimmed',
         'weight' => 2,
       ),
       'default' => array(
@@ -215,8 +217,10 @@ function commerce_content_types_field_default_field_instances() {
       'small_teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
+        'settings' => array(
+          'trim_length' => 100,
+        ),
+        'type' => 'text_trimmed',
         'weight' => 2,
       ),
       'teaser' => array(

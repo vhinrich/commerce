@@ -244,6 +244,25 @@ function commerce_pages_view_modes_default_page_manager_pages() {
     $pane->uuid = '5738e6da-b630-4190-b104-b43e6663a902';
     $display->content['new-5738e6da-b630-4190-b104-b43e6663a902'] = $pane;
     $display->panels['right'][1] = 'new-5738e6da-b630-4190-b104-b43e6663a902';
+    $pane = new stdClass();
+    $pane->pid = 'new-2892495f-5eb6-4858-bd8b-ab0f1204d773';
+    $pane->panel = 'top_main';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'nodequeue_1-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '2892495f-5eb6-4858-bd8b-ab0f1204d773';
+    $display->content['new-2892495f-5eb6-4858-bd8b-ab0f1204d773'] = $pane;
+    $display->panels['top_main'][0] = 'new-2892495f-5eb6-4858-bd8b-ab0f1204d773';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

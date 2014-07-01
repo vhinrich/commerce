@@ -1,6 +1,7 @@
 name = Commerce Views
 core = 7.x
 package = Commerce
+dependencies[] = nodequeue
 dependencies[] = views
 dependencies[] = views_content
 features[ctools][] = views:views_default:3.0
