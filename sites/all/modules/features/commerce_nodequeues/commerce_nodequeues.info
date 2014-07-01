@@ -1,0 +1,6 @@
+name = Commerce Nodequeues
+core = 7.x
+package = Commerce
+dependencies[] = fe_nodequeue
+features[fe_nodequeue][] = featured
+features[features_api][] = api:2
