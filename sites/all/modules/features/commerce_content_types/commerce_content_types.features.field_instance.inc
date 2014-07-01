@@ -210,6 +210,15 @@ function commerce_content_types_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_trimmed',
+        'weight' => 2,
+      ),
+      'featured' => array(
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 1,
@@ -273,8 +282,18 @@ function commerce_content_types_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
+          'image_link' => 'content',
+          'image_style' => 'featured',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'featured' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'featured',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -348,6 +367,19 @@ function commerce_content_types_field_default_field_instances() {
         'weight' => 3,
       ),
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'commerce_cart',
+        'settings' => array(
+          'combine' => TRUE,
+          'default_quantity' => 1,
+          'line_item_type' => 'product',
+          'show_quantity' => FALSE,
+          'show_single_product_attributes' => FALSE,
+        ),
+        'type' => 'commerce_cart_add_to_cart_form',
+        'weight' => 3,
+      ),
+      'featured' => array(
         'label' => 'hidden',
         'module' => 'commerce_cart',
         'settings' => array(

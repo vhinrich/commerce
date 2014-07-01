@@ -31,6 +31,7 @@ stylesheets[all][] = scss/panels.scss
 stylesheets[all][] = scss/views.scss
 stylesheets[all][] = scss/node-small-teaser.scss
 stylesheets[all][] = scss/node-big-teaser.scss
+stylesheets[all][] = scss/node-featured.scss
 
 
 ; For information on choosing the desired method, please read the Drupal
