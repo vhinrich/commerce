@@ -4,4 +4,5 @@ package = Commerce
 dependencies[] = image
 features[features_api][] = api:2
 features[image][] = big_teaser
+features[image][] = featured
 features[image][] = teaser
