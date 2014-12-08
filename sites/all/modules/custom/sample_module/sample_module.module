@@ -15,7 +15,7 @@ function sample_module_permission() {
 /**
  * Implements hook_menu().
  */
-function sample_module_menu(){  
+function sample_module_menu(){
   $items = array();
   $items['admin/config/sample-module'] = array(
     'page callback' => 'drupal_get_form', //function pag tinawag ung url (drupal_get_form() drupal function sya)
@@ -24,14 +24,14 @@ function sample_module_menu(){
     'description' => 'Configure Sample Module',
     'access arguments' => array('administer sample module'), //ung permission na ginawa nten sa hook_permission()
   );
-  
+
   $items['sample-module-page'] = array(
     'page callback' => 'sample_module_page', //function pag tinawag ung url
     'title' => t('Sample Page'),
     'access arguments' => array('access content'),
     'type' => MENU_NORMAL_ITEM,
   );
-  
+
   $items['sample-module-page-with-args/%'] = array(
     'page callback' => 'sample_module_page_with_args', //function pag tinawag ung url
     'title' => t('Sample Page'),
@@ -39,7 +39,7 @@ function sample_module_menu(){
     'access arguments' => array('access content'),
     'type' => MENU_NORMAL_ITEM,
   );
-  
+
   return $items;
 }
 
@@ -52,7 +52,40 @@ function sample_module_config_form(){
     '#type' => 'textfield',
     '#title' => 'Test'
   );
+  $form['email'] = array(
+    '#type' => 'submit',
+    '#submit' => array('sample_module_config_form_email_submit'),
+    '#value' => t('Email'));
   return system_settings_form($form);
+}
+
+function sample_module_config_form_email_submit($form, $form_state){
+  $module = 'today_security_login';
+  $key = 'notify';
+  $language = language_default();
+  $params = array();
+  $from = 'test@site.com';
+  $email = 'mark.cristobal@hrboss.com';
+  $send = FALSE;
+  $subject = 'Test subject';
+  $body = array('<div class="test">test</a>', '<a href="asdfas">test123</a>');
+
+  $message = drupal_mail($module, $key, $email, $language, $params, $from, $send);
+  $message['subject'] = $subject;
+  $message['body'] = $body;
+  $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed';
+
+
+  // Retrieve the responsible implementation for this message.
+  $system = drupal_mail_system($module, $key);
+
+
+  // Format the message body.
+  $message = $system->format($message);
+
+
+  // Send e-mail.
+  $message['result'] = $system->mail($message);
 }
 
 function sample_module_page(){
